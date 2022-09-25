@@ -10,6 +10,7 @@
 </head>
 <body>
 <h1>목록페이지</h1>
+<a href="enroll.do">등록페이지</a>
 <table border="1">
 		<tr>
 			<th>번호</th>
@@ -19,9 +20,11 @@
 			<th>수정일</th>
 		</tr>
 		<tbody>
-			<c:forEach var="list" items="${list }">
+			<c:forEach var="list" items="${list}">
 				<tr>
-					<td><c:out value="${list.bno }"/></td>
+					<td>${list.bno}</td>
+					<td><a href="detailPage.do">${list.title}</a></td>
+					<td>${list.content}</td>
 				</tr>
 			</c:forEach>
 		</tbody>

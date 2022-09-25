@@ -1,28 +1,32 @@
 package gyu.prj.controller;
 
-import javax.annotation.Resource;
-
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 
 import gyu.prj.service.TestHelloWorldService;
 
-@RestController
+@Controller
 @RequestMapping("/test")
 public class TestController {
 
-	@Resource(name = "testHelloWorldService")
+	@Autowired
 	private TestHelloWorldService testService;
 	
 	@RequestMapping("/hello.do")
 	public @ResponseBody String HelloWorldTest() {
+		System.out.println("hello.do 진입");
 		return "Hello World";
 	}
 	
 	@RequestMapping("/testDB.do")
-	public @ResponseBody String testDB() throws Exception{
-		return testService.testDB();
+	public void testDB(Model model) throws Exception{
+		
+		model.addAttribute("list", testService.boardList());
+		
+		System.out.println("testDB 진입");
 	}
 	
 }

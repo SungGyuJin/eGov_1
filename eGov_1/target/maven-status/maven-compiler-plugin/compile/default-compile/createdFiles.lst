@@ -1,4 +1,6 @@
+gyu\prj\service\impl\TestHelloWorldServiceImpl.class
 egovframework\example\sample\service\EgovSampleService.class
+gyu\prj\model\TestHelloWorldVO.class
 egovframework\example\cmmn\web\EgovBindingInitializer.class
 egovframework\example\sample\web\EgovSampleController.class
 egovframework\example\sample\service\impl\SampleDAO.class
@@ -8,4 +10,7 @@ egovframework\example\cmmn\EgovSampleExcepHndlr.class
 egovframework\example\sample\service\SampleDefaultVO.class
 egovframework\example\cmmn\EgovSampleOthersExcepHndlr.class
 egovframework\example\cmmn\web\EgovImgPaginationRenderer.class
+gyu\prj\mapper\TestHelloWorldMapper.class
+gyu\prj\service\TestHelloWorldService.class
 egovframework\example\sample\service\impl\SampleMapper.class
+gyu\prj\controller\TestController.class

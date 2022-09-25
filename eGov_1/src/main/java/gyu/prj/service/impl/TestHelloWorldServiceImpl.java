@@ -1,23 +1,26 @@
 package gyu.prj.service.impl;
 
-import javax.annotation.Resource;
+import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import egovframework.rte.fdl.cmmn.EgovAbstractServiceImpl;
 import gyu.prj.mapper.TestHelloWorldMapper;
+import gyu.prj.model.TestHelloWorldVO;
 import gyu.prj.service.TestHelloWorldService;
 
 @Service("TestHelloWorldService")
-public class TestHelloWorldServiceImpl extends EgovAbstractServiceImpl implements TestHelloWorldService{
+public class TestHelloWorldServiceImpl implements TestHelloWorldService{
 
-	@Resource(name="TestHelloWorldMapper")
+	@Autowired
 	private TestHelloWorldMapper testMapper;
-	
+
 	@Override
-	public String testDB() throws Exception {
+	public List<TestHelloWorldVO> boardList() throws Exception {
 		// TODO Auto-generated method stub
-		return null;
+		return testMapper.boardList();
 	}
+
+	
 
 }
